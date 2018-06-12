@@ -14,7 +14,6 @@ function fpsAfterDraw () {
 var bunnys = [];
 var bunnyFrames = [];
 var currentFrame = null;
-var bunnyType = 0;
 var gravity = 0.5;
 
 var maxX = 0;
@@ -61,6 +60,7 @@ cc.Class({
         },
         levelCount: 10,
         block: cc.SpriteFrame,
+        bunnySprite: cc.SpriteFrame,
         drawcallUp: true,
         number: cc.Label,
         fps: cc.Label,
@@ -87,21 +87,13 @@ cc.Class({
             bunnys[i] = [];
         }
         
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 47, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 86, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 125, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 164, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 2, 26, 37)) );
-        currentFrame = bunnyFrames[0];
+        currentFrame = this.bunnySprite;
         
         this.node.on('touchstart', function () {
             isAdding = true;
         });
         this.node.on('touchend', function () {
             isAdding = false;
-            bunnyType++;
-            bunnyType %= 5;
-            currentFrame = bunnyFrames[bunnyType];
         });
         this.node.on('touchcancel', function () {
             isAdding = false;
@@ -147,9 +139,6 @@ cc.Class({
             number.innerText = "STOPPED !!! \nFINAL SCORE : " + count;
         }
         else {
-            bunnyType++;
-            bunnyType %= 5;
-            currentFrame = bunnyFrames[bunnyType];
             if (dt < 1) dt = 1;
             var extra = Math.floor(20 / dt);
             for (var i = 0; i < extra; i++) {
