@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.2902777777777778,
-      "y": 0.2902777777777778,
+      "x": 1,
+      "y": 1,
       "z": 1
     },
     "_quat": {
@@ -52,8 +52,10 @@
       "z": 0,
       "w": 1
     },
-    "_localZOrder": 2,
+    "_zIndex": 0,
+    "_is3DNode": true,
     "groupIndex": 0,
+    "showInEditor": true,
     "autoReleaseAssets": false,
     "_id": "3c04b3e4-c3a0-46e5-ac0f-f1feca151f24"
   },
@@ -97,7 +99,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 480,
-      "height": 720
+      "height": 800
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -107,7 +109,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 240,
-      "y": 360,
+      "y": 400,
       "z": 0
     },
     "_scale": {
@@ -116,8 +118,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -127,8 +127,12 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 3,
+    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "showInEditor": true,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "b9ed6IRDsZOHYw+shOO111J"
   },
   {
@@ -177,8 +181,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -188,8 +190,12 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 4,
+    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "showInEditor": true,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "daXKeZuZZMZKW9HmA5QEcx"
   },
   {
@@ -200,6 +206,8 @@
       "__id__": 3
     },
     "_enabled": true,
+    "_srcBlendFactor": 1,
+    "_dstBlendFactor": 771,
     "_useOriginalSize": false,
     "_string": "0",
     "_N$string": "0",
@@ -261,8 +269,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -272,8 +278,12 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 5,
+    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "showInEditor": true,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "74YVCX1eFG65Z1cMRsa8lH"
   },
   {
@@ -288,14 +298,26 @@
     "_clearFlags": 7,
     "_backgroundColor": {
       "__type__": "cc.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 109,
+      "g": 109,
+      "b": 109,
       "a": 255
     },
     "_depth": 0,
     "_zoomRatio": 1,
     "_targetTexture": null,
+    "_fov": 60,
+    "_orthoSize": 10,
+    "_nearClip": 0.1,
+    "_farClip": 4096,
+    "_ortho": false,
+    "_rect": {
+      "__type__": "cc.Rect",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
     "_id": "f2o/xpW0RG0KY59jUKcCcn"
   },
   {
@@ -344,8 +366,6 @@
       "y": 1,
       "z": 1
     },
-    "_rotationX": 0,
-    "_rotationY": 0,
     "_quat": {
       "__type__": "cc.Quat",
       "x": 0,
@@ -355,8 +375,12 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 6,
+    "_zIndex": 0,
+    "_is3DNode": false,
     "groupIndex": 0,
+    "showInEditor": true,
+    "_rotationX": 0,
+    "_rotationY": 0,
     "_id": "6f93cRh1eVG0KVmvhFVo9I0"
   },
   {
@@ -367,6 +391,8 @@
       "__id__": 7
     },
     "_enabled": true,
+    "_srcBlendFactor": 1,
+    "_dstBlendFactor": 771,
     "_useOriginalSize": false,
     "_string": "",
     "_N$string": "",
@@ -393,9 +419,9 @@
     "_designResolution": {
       "__type__": "cc.Size",
       "width": 480,
-      "height": 720
+      "height": 800
     },
-    "_fitWidth": false,
+    "_fitWidth": true,
     "_fitHeight": true,
     "_id": "5c888ujutFBLF+Wy1QBz5Z"
   },
@@ -410,14 +436,14 @@
     "tex": {
       "__uuid__": "577bfc47-f373-4534-9bc2-21e7272f9367"
     },
-    "levelCount": 10,
+    "levelCount": 1,
     "block": {
       "__uuid__": "5215890c-2595-4dfc-93b0-6a73cc304a4a"
     },
     "bunnySprite": {
       "__uuid__": "b25676be-779e-4d6e-9b8e-ed3a398f5db5"
     },
-    "drawcallUp": true,
+    "drawcallUp": false,
     "number": {
       "__id__": 8
     },

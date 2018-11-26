@@ -14,10 +14,10 @@
   "design-resolution-height": 640,
   "design-resolution-width": 960,
   "excluded-modules": [
+    "Canvas Renderer",
     "VideoPlayer",
     "WebView",
-    "Intersection",
-    "Native NetWork"
+    "Intersection"
   ],
   "fit-height": true,
   "fit-width": false,

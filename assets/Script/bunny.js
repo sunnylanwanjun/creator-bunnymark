@@ -88,7 +88,6 @@ cc.Class({
         }
         
         currentFrame = this.bunnySprite;
-        
         this.node.on('touchstart', function () {
             isAdding = true;
         });
@@ -162,7 +161,7 @@ cc.Class({
         bunnys.push(bunny);
         bunny.scale = 0.5 + Math.random()*0.5;
 
-        bunny.rotation = 360 * (Math.random()*0.2 - 0.1);
+        bunny.angle = 360 * (Math.random()*0.2 - 0.1);
 
         this.node.addChild(bunny);
         count++;
@@ -196,8 +195,8 @@ cc.Class({
                 bunny.anchorY = 1;
                 //bunny.alpha = 0.3 + Math.random() * 0.7;
                 lbunnys.push(bunny);
-                bunny.scale = 0.5 + Math.random()*0.5;
-                bunny.rotation = 360 * (Math.random()*0.2 - 0.1);
+                bunny.scale = 0.3 * (0.5 + Math.random()*0.5);
+                bunny.angle = 360 * (Math.random()*0.2 - 0.1);
 
                 bunny.parent = parent;
                 count++;
