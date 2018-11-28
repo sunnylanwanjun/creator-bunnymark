@@ -433,10 +433,21 @@
       "__id__": 2
     },
     "_enabled": true,
-    "tex": {
-      "__uuid__": "577bfc47-f373-4534-9bc2-21e7272f9367"
-    },
-    "levelCount": 1,
+    "frames": [
+      {
+        "__uuid__": "7db8b1b9-8a90-4b01-a2b9-a2849ca78931"
+      },
+      {
+        "__uuid__": "047444fb-b11c-4624-b651-0107cff9ce9c"
+      },
+      {
+        "__uuid__": "3e738591-31f2-4484-bebc-186b7eeeb3b8"
+      },
+      {
+        "__uuid__": "a0fb8a50-80e9-4edb-a795-ae8cfa51475d"
+      }
+    ],
+    "levelCount": 5,
     "block": {
       "__uuid__": "5215890c-2595-4dfc-93b0-6a73cc304a4a"
     },

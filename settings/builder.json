@@ -1,4 +1,12 @@
 {
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
   "appKey": "",
   "appSecret": "",
   "encryptJs": false,
@@ -13,6 +21,7 @@
   "jailbreakPlatform": false,
   "md5Cache": false,
   "mergeStartScene": false,
+  "nativeRenderer": true,
   "oauthLoginServer": "",
   "optimizeHotUpdate": false,
   "orientation": {
@@ -21,15 +30,14 @@
     "portrait": true,
     "upsideDown": true
   },
-  "packageName": "org.cocos2d.creatorbunny",
+  "packageName": "org.cocos2d.creatorbunnynativerenderer",
   "privateKey": "",
   "qqplay": {
     "orientation": "portrait"
   },
-  "renderMode": "0",
   "startScene": "3c04b3e4-c3a0-46e5-ac0f-f1feca151f24",
-  "title": "creator_bunny",
-  "webOrientation": "portrait",
+  "title": "creator_bunny_native_renderer",
+  "webOrientation": "auto",
   "wechatgame": {
     "appid": "wx6ac3f5090a6b99c5",
     "orientation": "portrait"

@@ -12,7 +12,6 @@ function fpsAfterDraw () {
 
 
 var bunnys = [];
-var bunnyFrames = [];
 var currentFrame = null;
 var bunnyType = 0;
 var gravity = 0.5;
@@ -55,9 +54,9 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        tex: {
-            type: cc.Texture2D,
-            default: null
+        frames: {
+            type: [cc.SpriteFrame],
+            default: []
         },
         levelCount: 10,
         block: cc.SpriteFrame,
@@ -86,13 +85,7 @@ cc.Class({
         for (var i = 0; i < this.levelCount; i++) {
             bunnys[i] = [];
         }
-        
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 47, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 86, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 125, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 164, 26, 37)) );
-        bunnyFrames.push( new cc.SpriteFrame(this.tex, cc.rect(2, 2, 26, 37)) );
-        currentFrame = bunnyFrames[0];
+        currentFrame = this.frames[0];
         
         this.node.on('touchstart', function () {
             isAdding = true;
@@ -101,8 +94,8 @@ cc.Class({
             isAdding = false;
             bunnyType++;
             bunnyType %= 5;
-            currentFrame = bunnyFrames[bunnyType];
-        });
+            currentFrame = this.frames[bunnyType];
+        }, this);
         this.node.on('touchcancel', function () {
             isAdding = false;
         });
@@ -148,8 +141,8 @@ cc.Class({
         }
         else {
             bunnyType++;
-            bunnyType %= 5;
-            currentFrame = bunnyFrames[bunnyType];
+            bunnyType %= this.frames.length;
+            currentFrame = this.frames[bunnyType];
             if (dt < 1) dt = 1;
             var extra = Math.floor(20 / dt);
             for (var i = 0; i < extra; i++) {
@@ -171,7 +164,7 @@ cc.Class({
         bunny.anchorY = 1;
         //bunny.alpha = 0.3 + Math.random() * 0.7;
         bunnys.push(bunny);
-        bunny.scale = 0.5 + Math.random()*0.5;
+        bunny.scale = 0.3;
 
         bunny.rotation = 360 * (Math.random()*0.2 - 0.1);
 
@@ -207,7 +200,7 @@ cc.Class({
                 bunny.anchorY = 1;
                 //bunny.alpha = 0.3 + Math.random() * 0.7;
                 lbunnys.push(bunny);
-                bunny.scale = 0.5 + Math.random()*0.5;
+                bunny.scale = 0.3;
                 bunny.rotation = 360 * (Math.random()*0.2 - 0.1);
 
                 bunny.parent = parent;
