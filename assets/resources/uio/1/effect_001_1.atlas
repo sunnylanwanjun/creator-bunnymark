@@ -1,0 +1,76 @@
+
+effect_001_1.png
+size: 1012,206
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DI_00040
+  rotate: false
+  xy: 2, 104
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00041
+  rotate: false
+  xy: 2, 2
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00042
+  rotate: false
+  xy: 204, 104
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00043
+  rotate: false
+  xy: 204, 2
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00044
+  rotate: false
+  xy: 406, 104
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00045
+  rotate: false
+  xy: 406, 2
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00046
+  rotate: false
+  xy: 608, 104
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00047
+  rotate: false
+  xy: 608, 2
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00048
+  rotate: false
+  xy: 810, 104
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+DI_00049
+  rotate: false
+  xy: 810, 2
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1

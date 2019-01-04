@@ -1,0 +1,41 @@
+
+effect_001_3.png
+size: 96,46
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+S_light_00000
+  rotate: false
+  xy: 2, 24
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1
+S_light_00001
+  rotate: false
+  xy: 2, 2
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1
+S_light_00002
+  rotate: false
+  xy: 38, 24
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1
+S_light_00003
+  rotate: false
+  xy: 38, 2
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1
+S_light_00004
+  rotate: true
+  xy: 74, 10
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1

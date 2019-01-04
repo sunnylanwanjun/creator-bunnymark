@@ -1,0 +1,51 @@
+{
+"skeleton": { "hash": "lW1nFn/nIxrvNwWuPElFjRO77i4", "spine": "3.6.50", "width": 0, "height": 0, "images": "../../" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "2", "parent": "root" }
+],
+"slots": [
+	{ "name": "源文件/Dg_00000", "bone": "2", "attachment": "源文件/Dg_00000" }
+],
+"skins": {
+	"default": {
+		"源文件/Dg_00000": {
+			"源文件/Dg_00000": { "width": 450, "height": 450 },
+			"源文件/Dg_00001": { "width": 450, "height": 300 },
+			"源文件/Dg_00002": { "width": 400, "height": 225 },
+			"源文件/Dg_00003": { "width": 256, "height": 128 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"源文件/Dg_00000": {
+				"attachment": [
+					{ "time": 0, "name": "源文件/Dg_00000" },
+					{ "time": 0.0333, "name": "源文件/Dg_00001" },
+					{ "time": 0.1, "name": "源文件/Dg_00002" },
+					{ "time": 0.1667, "name": "源文件/Dg_00003" },
+					{ "time": 0.2333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"2": {
+				"rotate": [
+					{ "time": 0, "angle": -0.32 }
+				],
+				"translate": [
+					{ "time": 0, "x": 10.94, "y": 135.8 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.5, "y": -0.7 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": -23.11 }
+				]
+			}
+		}
+	}
+}
+}

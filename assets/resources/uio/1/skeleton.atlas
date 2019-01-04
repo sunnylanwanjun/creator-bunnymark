@@ -1,0 +1,34 @@
+
+skeleton.png
+size: 391,157
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+源文件/Dg_00000
+  rotate: false
+  xy: 2, 2
+  size: 153, 153
+  orig: 153, 153
+  offset: 0, 0
+  index: -1
+源文件/Dg_00001
+  rotate: false
+  xy: 157, 53
+  size: 153, 102
+  orig: 153, 102
+  offset: 0, 0
+  index: -1
+源文件/Dg_00002
+  rotate: true
+  xy: 312, 19
+  size: 136, 77
+  orig: 136, 77
+  offset: 0, 0
+  index: -1
+源文件/Dg_00003
+  rotate: false
+  xy: 157, 7
+  size: 87, 44
+  orig: 87, 44
+  offset: 0, 0
+  index: -1
