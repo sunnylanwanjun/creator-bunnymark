@@ -27,6 +27,7 @@ var count = 0;
 var number;
 
 var amount = 100;
+var deleteCount = 500;
 
 var checking = false;
 var totalDt = 0;
@@ -116,6 +117,26 @@ cc.Class({
         }
     },
 
+    deleteBunny: function () {
+        var curDelCount = 0;
+        for (var i = 0; i < this.levelCount; i++) 
+        {
+            var lbunnys = bunnys[i];
+            for (var j = lbunnys.length - 1; j >= 0; j--) {
+                var bunny = lbunnys[j];
+                bunny.destroy();
+                curDelCount ++;
+                count--;
+                lbunnys.pop();
+                if (curDelCount === deleteCount) {
+                    number.innerText = count;
+                    return;
+                }
+            }
+        }
+        number.innerText = count;
+    },
+
     add: function () {
         this.addOnce();
         this.scheduleOnce(this.check, 5);
@@ -166,7 +187,7 @@ cc.Class({
         bunnys.push(bunny);
         bunny.scale = 0.3;
 
-        bunny.rotation = 360 * (Math.random()*0.2 - 0.1);
+        bunny.angle = 360 * (Math.random()*0.2 - 0.1);
 
         this.node.addChild(bunny);
         count++;
@@ -201,14 +222,14 @@ cc.Class({
                 //bunny.alpha = 0.3 + Math.random() * 0.7;
                 lbunnys.push(bunny);
                 bunny.scale = 0.3;
-                bunny.rotation = 360 * (Math.random()*0.2 - 0.1);
+                bunny.angle = 360 * (Math.random()*0.2 - 0.1);
 
                 bunny.parent = parent;
                 count++;
             }
-            var nextContainer = new cc.Node();
-            parent.addChild(nextContainer);
-            parent = nextContainer;
+            // var nextContainer = new cc.Node();
+            // parent.addChild(nextContainer);
+            // parent = nextContainer;
         }
         number.innerText = count;
     },

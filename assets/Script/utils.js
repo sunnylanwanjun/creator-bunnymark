@@ -22,11 +22,7 @@ cc.Class({
         }
         else if (eventType == 2)
         {
-            cc.director.loadScene("SkeletonScene");
-        }
-        else if (eventType == 3)
-        {
-            cc.director.loadScene("DragonBones");
+            cc.director.loadScene("DynSkeScene");
         }
     },
 

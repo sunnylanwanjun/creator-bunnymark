@@ -36,7 +36,7 @@
     "orientation": "portrait"
   },
   "startScene": "3c04b3e4-c3a0-46e5-ac0f-f1feca151f24",
-  "title": "creator_bunny_native_renderer",
+  "title": "bunny-add-del",
   "webOrientation": "auto",
   "wechatgame": {
     "appid": "wx6ac3f5090a6b99c5",
