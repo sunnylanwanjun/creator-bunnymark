@@ -21,13 +21,12 @@ var minX = 0;
 var maxY = 0;
 var minY = 0;
 
-var startBunnyCount = 2;
 var isAdding = false;
 var count = 0;
 var number;
 
-var amount = 100;
-var deleteCount = 500;
+var amount = 1000;
+var deleteCount = 1000;
 
 var checking = false;
 var totalDt = 0;
@@ -94,7 +93,7 @@ cc.Class({
         this.node.on('touchend', function () {
             isAdding = false;
             bunnyType++;
-            bunnyType %= 5;
+            bunnyType %= this.frames.length;
             currentFrame = this.frames[bunnyType];
         }, this);
         this.node.on('touchcancel', function () {

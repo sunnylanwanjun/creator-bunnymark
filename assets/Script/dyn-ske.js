@@ -20,14 +20,12 @@ cc.Class({
         this.minY = -this.maxY;
         this.handleCount = 5;
         this.skeArr = [];
-        this.maxCount = 140;
 
         this.add();
     },
 
     add () {
         for (var i = 0; i < this.handleCount; i++) {
-            if (this.skeArr.length >= this.maxCount) break;
             let index = Math.random() * this.tplArr.length;
             index = Math.floor(index);
             let tpl = this.tplArr[index];
