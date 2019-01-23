@@ -26,8 +26,7 @@ cc.Class({
 
     add () {
         for (var i = 0; i < this.handleCount; i++) {
-            let index = Math.random() * this.tplArr.length;
-            index = Math.floor(index);
+            let index = i % this.tplArr.length;
             let tpl = this.tplArr[index];
             if (!tpl) return;
             let newNode = cc.instantiate(tpl);
