@@ -68,6 +68,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        count = 0;
         number = this.number;
         number.node.active = true;
         number.node.zIndex = 100;
