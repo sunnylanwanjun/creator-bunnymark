@@ -115,9 +115,13 @@ cc.Class({
         else {
             this.fps.node.active = false;
         }
+
+        this.gcTimes = 5;
     },
 
     deleteBunny: function () {
+        this.gcTimes = 5;
+
         var curDelCount = 0;
         for (var i = 0; i < this.levelCount; i++) 
         {
@@ -195,6 +199,8 @@ cc.Class({
     },
 
     addOnce: function () {
+        if (count>= 30000) return;
+
         let amountPerLevel = Math.floor(amount / this.levelCount);
         let parent = this.node;
     
@@ -226,7 +232,9 @@ cc.Class({
 
                 bunny.parent = parent;
                 count++;
+                if (count>= 30000) break;
             }
+            if (count>= 30000) break;
             // var nextContainer = new cc.Node();
             // parent.addChild(nextContainer);
             // parent = nextContainer;
@@ -277,6 +285,11 @@ cc.Class({
                 bunny.setPosition(x, y);
             }
         }
+
+        if (this.gcTimes <= 0) return;
+        this.gcTimes--;
+        cc.sys.garbageCollect();
+
         // var end = new Date().getTime();
         // console.log('Update / Delta Time =', end-start, '/', dt*1000, '=', ((end-start)/(dt*1000)).toFixed(2));
     },
