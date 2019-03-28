@@ -25,8 +25,8 @@ var isAdding = false;
 var count = 0;
 var number;
 
-var amount = 1000;
-var deleteCount = 1000;
+var amount = 500;
+var deleteCount = 500;
 
 var checking = false;
 var totalDt = 0;
