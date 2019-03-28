@@ -218,19 +218,24 @@ cc.Class({
         {
             var lbunnys = bunnys[i];
             for (var j = 0; j < amountPerLevel; j++) {
-                bunny = new cc.Node();
+                var rootNode = new cc.Node();
+                rootNode.setPosition(minX + 10, .7 * maxY);
+                rootNode.anchorY = 1;
+                rootNode.scale = 0.2;
+                rootNode.angle = 360 * (.2 * Math.random() - .1);
+                rootNode.speedX = 10 * Math.random();
+                rootNode.speedY = 10 * Math.random() - 5;
+                lbunnys.push(rootNode);
+                var nowNode = rootNode;
+                nowNode.parent = parent;
+                for (var i = 0; i < 2; i++) {
+                    var tempNode = new cc.Node();
+                    tempNode.parent = nowNode;
+                    nowNode = tempNode;
+                }
+                bunny = nowNode;
                 bunnysp = bunny.addComponent(cc.Sprite);
                 bunnysp.spriteFrame = currentFrame;
-                bunny.speedX = Math.random() * 10;
-                bunny.speedY = (Math.random() * 10) - 5;
-                bunny.setPosition(minX + 10, maxY * 0.7);
-                bunny.anchorY = 1;
-                //bunny.alpha = 0.3 + Math.random() * 0.7;
-                lbunnys.push(bunny);
-                bunny.scale = 0.3;
-                bunny.angle = 360 * (Math.random()*0.2 - 0.1);
-
-                bunny.parent = parent;
                 count++;
                 if (count>= 30000) break;
             }
@@ -283,6 +288,11 @@ cc.Class({
                 bunny.speedX = speedX;
                 bunny.speedY = speedY;
                 bunny.setPosition(x, y);
+                bunny.angle = 0.01;
+                while (bunny.children.length>0){
+                    bunny = bunny.children[0];
+                    bunny.angle = 0.01;
+                }
             }
         }
 
