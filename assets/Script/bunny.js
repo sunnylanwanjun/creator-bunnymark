@@ -228,7 +228,7 @@ cc.Class({
                 lbunnys.push(rootNode);
                 var nowNode = rootNode;
                 nowNode.parent = parent;
-                for (var i = 0; i < 2; i++) {
+                for (var k = 0; k < 2; k++) {
                     var tempNode = new cc.Node();
                     tempNode.parent = nowNode;
                     nowNode = tempNode;
